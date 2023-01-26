@@ -28,5 +28,7 @@ namespace Notify.Interfaces
         Task<LetterNotificationResponse> SendLetterAsync(string templateId, Dictionary<string, dynamic> personalisation, string clientReference = null);
 
         Task<LetterNotificationResponse> SendPrecompiledLetterAsync(string clientReference, byte[] pdfContents, string postage);
+
+        Task<byte[]> GetPdfForLetterAsync(string notificationId);
     }
 }

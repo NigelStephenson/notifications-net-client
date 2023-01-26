@@ -27,5 +27,7 @@ namespace Notify.Interfaces
         LetterNotificationResponse SendLetter(string templateId, Dictionary<string, dynamic> personalisation, string clientReference = null);
 
         LetterNotificationResponse SendPrecompiledLetter(string clientReference, byte[] pdfContents, string postage = null);
+
+        byte[] GetPdfForLetter(string notificationId);
     }
 }
